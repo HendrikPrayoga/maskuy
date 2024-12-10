@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Tiket</title>
+    <link rel="stylesheet" href="edit_tiket.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo" class="logo">
+            </div>
+            <ul class="menu">
+                <li><a href="/Code Maskuy/Kelola Pelanggan/kelola_pelanggan1.html">👤 Kelola Pelanggan</a></li>
+                <li><a href="/Code Maskuy/Kelola Tiket/Kelola_tiket1.html">🎫 Kelola Tiket</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-buttons">
+                    <a href="profile.html" class="profile-btn">Profile</a>
+                    <a href="/Code Maskuy/Beranda/Beranda.html" class="logout-btn">Logout</a>
+                </div>
+            </div>
+
+            <div class="back-button">
+                <a href="Kelola_tiket1.html" class="back-btn">
+                    <span class="arrow">&#8592;</span>
+                </a>
+            </div>
+
+            <div class="form-container">
+                <h2>Edit Data Tiket</h2>
+                <form id="editForm" method="POST">
+                    <input type="hidden" id="id" name="id">
+                    
+                    <div class="form-group">
+                        <label for="nomor_identitas">Nomor Identitas:</label>
+                        <input type="text" id="nomor_identitas" name="nomor_identitas" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama_lengkap">Nama Lengkap:</label>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlah_tiket">Jumlah Tiket:</label>
+                        <input type="number" id="jumlah_tiket" name="jumlah" required min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_tiket">ID:</label>
+                        <input type="text" id="id_tiket" name="id" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total_harga">Total Harga:</label>
+                        <input type="number" id="total_harga" name="total" readonly>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit">Edit Data</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+            <div class="dialog-content">
+                <div class="dialog-icon">
+                    <img src="tanya.png" alt="Question Mark" class="question-icon">
+                </div>
+                <div class="dialog-text">
+                    Apakah Anda yakin ingin keluar<br>dari akun ini?
+                </div>
+                <div class="dialog-buttons">
+                    <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                    <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+    </div>
+
+    <script src="Kelola_tkt.js"></script>
+</body>
+</html>

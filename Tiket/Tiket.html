@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beli Tiket Masuk - Maskuy</title>
+    <link rel="stylesheet" href="Tiket.css">
+</head>
+
+<body>
+    <nav>
+        <div class="">
+            <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY " />
+        </div>
+        <ul>
+            <li>
+                <a href="/Code Maskuy/Beranda/Beranda.html
+                ">Beranda</a>
+            </li>
+            <li>
+                <a href="/Code Maskuy/Acara/Acara.html">Acara</a>
+            </li>
+            <li>
+                <a href="/Code Maskuy/Jelajah/Jelajah.html">Jelajah</a>
+            </li>
+            <li>
+                <a href="/Code Maskuy/Blog/Blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="/Code Maskuy/Tiket/Tiket.html" class="btn">Beli Sekarang</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="ticket-section">
+            <h2>Beli Tiket Masuk</h2>
+            <div class="container">
+                <div class="ticket-details">
+                    <h3>Tiket Masuk</h3>
+                    <p>Harga</p>
+                    <p class="price">Rp. 2.000,00</p>
+                    <div class="quantity">
+                        <button class="btn" onclick="decrement()">-</button>
+                        <input type="number" name="jumlah" value="1" min="1" readonly>
+                        <button class="btn" onclick="increment()">+</button>
+                    </div>
+                </div>
+
+                <div class="order-details">
+                    <h3>Rincian Pesanan</h3>
+                    <table>
+                        <tr>
+                            <td>Tiket Masuk Taman Mas Kemambang</td>
+                            <td id="jumlahTiket">x1</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td id="subtotal">Rp. 2.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td id="total">Rp. 2.000,00</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="order-form">
+                    <h3>Data Pemesan</h3>
+                    <form action="tiket.php" method="POST">
+                        <label for="nama">Nama Lengkap *</label>
+                        <input type="text" id="nama" name="nama_lengkap" required>
+
+                        <label for="identitas">Nomor Identitas *</label>
+                        <input type="text" id="identitas" name="nomor_identitas" required>
+
+                        <label for="telepon">Nomor Telepon *</label>
+                        <input type="tel" id="telepon" name="nomor_telepon" required>
+
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <input type="hidden" id="jumlah-tiket" name="jumlah" value="1">
+                        <input type="hidden" name="harga" value="2000">
+
+                        <button type="submit" class="btn-primary">Bayar</button>
+                    </form>
+                    <script src="Script.js" defer></script>
+                </div>
+
+                <div class="payment-method">
+                    <h3>Metode Pembayaran</h3>
+                    <p>Qris</p>
+                    <div class="qris">
+                        <p id="totalPembayaran">Rp. 2.000,00</p>
+                        <div class="qr-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Kolom Kiri - About -->
+        <div class="footer-section">
+            <div class="footer-logo">
+                <img src="/MASKUYWhite.png" alt="MASKUY Logo">
+            </div>
+            <p class="footer-description">
+                Maskuy adalah sebuah platform pemesanan tiket online yang dirancang khusus untuk Taman Mas Kemambang di Purwokerto. Melalui website ini, pengguna dapat mengetahui informasi lengkap tentang berbagai acara yang berlangsung di Taman Mas Kemambang, termasuk festival budaya, pertunjukan seni, dan kegiatan rekreasi lainnya.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-icon facebook">
+                    <img src="/Code Maskuy/Beranda/Foto/Facebook logo.png" alt="Facebook">
+                </a>
+                <a href="#" class="social-icon instagram">
+                    <img src="/Code Maskuy/Beranda/Foto/instagram logo.png" alt="Instagram">
+                </a>
+                <a href="#" class="social-icon twitter">
+                    <img src="/Code Maskuy/Beranda/Foto/twitter logo.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+
+        <!-- Kolom Tengah - Quick Links -->
+        <div class="footer-section">
+            <ul class="footer-links">
+                <li><a href="/Code Maskuy/Tiket/Tiket.html">Dapatkan Tiket</a></li>
+                <li><a href="/Code Maskuy/Blog/Blog.html">Blog</a></li>
+                <li><a href="/Code Maskuy/FAQ/FAQ.html">FAQ</a></li>
+                <li><a href="/Code Maskuy/Pusat Bantuan/PusatBantuan.html">Pusat Bantuan</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Kolom Kanan - Contact Info -->
+        <div class="footer-section">
+            <div class="contact-info">
+                <div class="info-item">
+                    <span class="label">Email</span>
+                    <span class="value">: support@maskuy.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Telepon</span>
+                    <span class="value">: (021) 12345678</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Alamat</span>
+                    <span class="value">: Jl. Karang Kobar No.9, Glempang, Bancarkembar,
+                        Kec. Purwokerto Utara, Kabupaten Banyumas,
+                        Jawa Tengah 53115</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Jam Operasional</span>
+                    <span class="value">: Senin-Minggu, 08:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>Copyright © 2024 MasKuy. All Rights Reserved</p>
+    </div>
+</footer>
+</html>

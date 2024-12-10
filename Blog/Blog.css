@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf6ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #0066cc;
+}
+
+/* mengatur navigasi */
+nav {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: #6ab0ea;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 0, 0, 0);
+}
+
+/* Style untuk button "Beli Sekarang" */
+.btn {
+    background-color: #6ab0ea;
+    /* Warna awal background */
+    color: white;
+    /* Warna teks tetap putih */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    /* Sudut melengkung */
+    transition: background-color 0.3s ease;
+    /* Transisi untuk perubahan background */
+}
+
+/* Saat button di-hover */
+.btn:hover {
+    background-color: #1b95e0;
+    /* Warna background berubah saat di-hover */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+/* Saat button diklik */
+.btn:active {
+    background-color: #1b95e0;
+    /* Warna background berubah saat diklik */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+nav ul li a:hover {
+    color: #1b95e0;
+    border-bottom: 3px solid #1b95e0;
+}
+
+/* mengatur navigasi */
+
+
+.blog-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #eaf6ff;
+}
+
+.blog-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1f4b99;
+}
+
+.blog-content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Logo dan Deskripsi */
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #add8e6;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 14px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.label {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.value {
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .btn-primary {
+        margin-top: 10px;
+    }
+}

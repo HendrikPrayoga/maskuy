@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Pelanggan</title>
+    <link rel="stylesheet" href="edit_pelanggan.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo" class="logo">
+            <div class="menu">
+                <a href="kelola_pelanggan1.html" class="menu-item active">
+                    👤 Kelola Pelanggan
+                </a>
+                <a href="/Code Maskuy/Kelola Tiket/Kelola_tiket1.html" class="menu-item">
+                    🎫 Kelola Tiket
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="user-info">
+                    <span class="user-role">Admin</span>
+                </div>
+                <a href="/Code Maskuy/Beranda/Beranda.html" class="logout-btn">Logout</a>
+            </div>
+
+            <a href="kelola_pelanggan1.html" class="back-btn">←</a>
+            
+            <h2>Edit Data Pelanggan</h2>
+
+            <div class="form-container">
+                <form id="edit-form" method="post" onsubmit="handleSubmit(event)">
+                    <input type="hidden" id="id" name="id">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nomor_identitas">No Identitas</label>
+                            <input type="text" id="nomor_identitas" name="nomor_identitas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomor_telepon">Nomor Telepon</label>
+                            <input type="text" id="nomor_telepon" name="nomor_telepon" required>
+                        </div>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama_lengkap">Nama Lengkap</label>
+                            <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_pelanggan">Email Pelanggan</label>
+                            <input type="email" id="email_pelanggan" name="email_pelanggan" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="edit-data-btn">Edit Data</button>
+                </form>
+            </div>
+        </div>
+        <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+            <div class="dialog-content">
+                <div class="dialog-icon">
+                    <img src="tanya.png" alt="Question Mark" class="question-icon">
+                </div>
+                <div class="dialog-text">
+                    Apakah Anda yakin ingin keluar<br>dari akun ini?
+                </div>
+                <div class="dialog-buttons">
+                    <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                    <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+    </div>
+    <script src="kelola_pelanggan.js"></script>
+</body>
+</html>

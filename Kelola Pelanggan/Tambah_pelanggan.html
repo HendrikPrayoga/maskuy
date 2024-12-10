@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Pelanggan</title>
+    <link rel="stylesheet" href="Tambah_pelanggan.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo" class="logo">
+            <a href="kelola_pelanggan1.html" class="menu-item active">
+                👤 Kelola Pelanggan
+            </a>
+            <a href="/Kelola Tiket/Kelola_tiket1.html" class="menu-item">
+                🎫 Kelola Tiket
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                </div>
+                <a href="/Beranda/Beranda.html" class="logout-btn">Logout</a>
+            </div>
+
+            <a href="kelola_pelanggan1.html" class="back-btn">←</a>
+            
+            <h1 class="page-title">Tambah Data Pelanggan</h1>
+
+            <form id="tambahForm" onsubmit="handleTambahSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nomor_identitas">No Identitas</label>
+                        <input type="text" id="nomor_identitas" name="nomor_identitas">
+                    </div>
+                    <div class="form-group">
+                        <label for="nomor_telepon">Nomor Telepon</label>
+                        <input type="tel" id="nomor_telepon" name="nomor_telepon">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nama_lengkap">Nama Lengkap</label>
+                        <input type="text" id="nama_lengkap" name="nama_lengkap">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Pelanggan</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Tambah Data</button>
+
+                <div id="success-popup" class="success-popup" style="display: none;">
+    
+                    <div class="popup-content">
+                    <div class="success-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 7"></path>
+            </svg>
+        </div>
+        <p class="success-message">Data berhasil ditambahkan!</p>
+        <button class="popup-button" onclick="closePopup()">Kembali</button>
+    </div>
+</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+            <div class="dialog-content">
+                <div class="dialog-icon">
+                    <img src="tanya.png" alt="Question Mark" class="question-icon">
+                </div>
+                <div class="dialog-text">
+                    Apakah Anda yakin ingin keluar<br>dari akun ini?
+                </div>
+                <div class="dialog-buttons">
+                    <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                    <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+    </div>
+    <script src="kelola_pelanggan.js"></script>
+</body>
+</html>

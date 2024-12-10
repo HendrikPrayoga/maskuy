@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf6ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #0066cc;
+}
+
+/* mengatur navigasi */
+nav {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: #6ab0ea;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 0, 0, 0);
+}
+
+/* Style untuk button "Beli Sekarang" */
+.btn {
+    background-color: #6ab0ea;
+    /* Warna awal background */
+    color: white;
+    /* Warna teks tetap putih */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    /* Sudut melengkung */
+    transition: background-color 0.3s ease;
+    /* Transisi untuk perubahan background */
+}
+
+/* Saat button di-hover */
+.btn:hover {
+    background-color: #1b95e0;
+    /* Warna background berubah saat di-hover */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+/* Saat button diklik */
+.btn:active {
+    background-color: #1b95e0;
+    /* Warna background berubah saat diklik */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+nav ul li a:hover {
+    color: #1b95e0;
+    border-bottom: 3px solid #1b95e0;
+}
+
+/* mengatur navigasi */
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Jelajah Section */
+.jelajah-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.jelajah-title {
+    font-size: 36px;
+    color: #0074CE;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.jelajah-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.jelajah-item:hover {
+    transform: translateY(-5px);
+}
+
+.jelajah-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.jelajah-img {
+    flex: 0 0 auto;
+    width: 400px;
+}
+
+.jelajah-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.jelajah-content {
+    flex: 1;
+}
+
+.jelajah-content h2 {
+    color: #1b95e0;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.jelajah-content p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* footer */
+
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Logo dan Deskripsi */
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #add8e6;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 14px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.label {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.value {
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .jelajah-img {
+        width: 300px;
+    }
+
+    .jelajah-img img {
+        height: 200px;
+    }
+
+    .jelajah-item {
+        padding: 1.25rem;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        padding: 8px 1rem;
+    }
+
+    .jelajah-item,
+    .jelajah-item.reverse {
+        flex-direction: column;
+    }
+
+    .jelajah-img {
+        width: 100%;
+    }
+
+    .jelajah-img img {
+        height: 200px;
+    }
+
+    .jelajah-content h2 {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .jelajah-content p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    .jelajah-section {
+        gap: 1rem;
+    }
+
+    .jelajah-item {
+        padding: 1rem;
+    }
+
+    .jelajah-img img {
+        height: 180px;
+    }
+
+    .jelajah-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .jelajah-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jelajah-item {
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.jelajah-item:nth-child(1) { animation-delay: 0.1s; }
+.jelajah-item:nth-child(2) { animation-delay: 0.2s; }
+.jelajah-item:nth-child(3) { animation-delay: 0.3s; }
+.jelajah-item:nth-child(4) { animation-delay: 0.4s; }
+.jelajah-item:nth-child(5) { animation-delay: 0.5s; }
+.jelajah-item:nth-child(6) { animation-delay: 0.6s; }
+.jelajah-item:nth-child(7) { animation-delay: 0.7s; }
+.jelajah-item:nth-child(8) { animation-delay: 0.8s; }
+.jelajah-item:nth-child(9) { animation-delay: 0.9s; }
+.jelajah-item:nth-child(10) { animation-delay: 1s; }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Tiket</title>
+    <link rel="stylesheet" href="Tambah_tkt.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo dan Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo">
+            </div>
+            <nav>
+                <a href="kelola_pelanggan1.html" class="nav-item">
+                    <span class="nav-icon">👤</span> Kelola Pelanggan
+                </a>
+                <a href="Kelola_tiket1.html" class="nav-item">
+                    <span class="nav-icon">🎫</span> Kelola Tiket
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header>
+                <a href="Kelola_tiket1.html" class="back-btn">←</a>
+                <div class="header-right">
+                    <span class="admin-name"></span>
+                    <a href="/Code Maskuy/Beranda/Beranda.html" class="logout-btn">Logout</a>
+                </div>
+            </header>
+
+            <!-- Form Section -->
+            <div class="form-container">
+                <div class="form-content">
+                    <h1>Tambah Data Tiket</h1>
+                    <form method="post" action="Tambah.php">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="kode_tiket">Kode Tiket</label>
+                                <input type="text" id="kode_tiket" name="kode_tiket" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jumlah_tiket">Jumlah Tiket</label>
+                                <input type="number" id="jumlah_tiket" name="jumlah" required oninput="updateTotal()">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="no_identitas">No Identitas</label>
+                                <input type="text" id="no_identitas" name="no_identitas" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="total_harga">Total Harga</label>
+                                <input type="number" id="total_harga" name="total" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nama_lengkap">Nama Lengkap</label>
+                            <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+                        </div>
+
+                        <button type="submit" name="submit" class="submit-btn">Tambah Data</button>
+                    </form>
+                </div>
+                <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+                    <div class="dialog-content">
+                        <div class="dialog-icon">
+                            <img src="tanya.png" alt="Question Mark" class="question-icon">
+                        </div>
+                        <div class="dialog-text">
+                            Apakah Anda yakin ingin keluar<br>dari akun ini?
+                        </div>
+                        <div class="dialog-buttons">
+                            <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                            <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan dialog logout
+function showLogoutDialog() {
+    document.getElementById('logoutDialog').style.display = 'flex';
+}
+
+// Fungsi untuk menutup dialog logout
+function closeLogoutDialog() {
+    document.getElementById('logoutDialog').style.display = 'none';
+}
+
+// Fungsi untuk konfirmasi logout
+function confirmLogout() {
+    console.log('Melakukan logout...');
+    window.location.href = '/Code Maskuy/Beranda/Beranda.html';
+}
+
+
+        // Tambahkan event listener untuk tombol logout
+    const logoutBtn = document.querySelector('.logout-btn');
+    if(logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showLogoutDialog();
+        });
+    }
+        function updateTotal() {
+            const jumlahTiket = document.getElementById('jumlah_tiket').value;
+            const hargaTiket = 2000; // Harga per tiket
+            const totalHarga = jumlahTiket * hargaTiket;
+            document.getElementById('total_harga').value = totalHarga || 0;
+        }
+    </script>
+</body>
+</html>

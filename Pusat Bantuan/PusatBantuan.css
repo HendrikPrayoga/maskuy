@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf6ff;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0066cc;
+    display: inline-block;
+}
+
+/* mengatur navigasi */
+nav {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav div img {
+    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', sans-serif;
+    color: #6ab0ea;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid rgba(255, 0, 0, 0);
+}
+
+/* Style untuk button "Beli Sekarang" */
+.btn {
+    background-color: #6ab0ea;
+    /* Warna awal background */
+    color: white;
+    /* Warna teks tetap putih */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    /* Sudut melengkung */
+    transition: background-color 0.3s ease;
+    /* Transisi untuk perubahan background */
+}
+
+/* Saat button di-hover */
+.btn:hover {
+    background-color: #1b95e0;
+    /* Warna background berubah saat di-hover */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+/* Saat button diklik */
+.btn:active {
+    background-color: #1b95e0;
+    /* Warna background berubah saat diklik */
+    color: white;
+    /* Warna teks tetap putih */
+}
+
+nav ul li a:hover {
+    color: #1b95e0;
+    border-bottom: 3px solid #1b95e0;
+}
+
+/* mengatur navigasi */
+
+
+/* Main Content Styles */
+.main-content {
+    max-width: 1200px;
+    margin: auto 2rem;
+    margin-left: 150px;
+    margin-right: 80px;
+    padding: 2rem;
+}
+
+.help-section h1 {
+    color: #0074CE;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.help-block {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.help-block h2 {
+    color: #0074CE;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.help-block p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.contact-list {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+
+.steps-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.steps-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .main-content {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+
+    .help-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .help-block {
+        padding: 1.5rem;
+    }
+
+    .help-block h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem 0.5rem;
+    }
+
+    .help-section h1 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .help-block {
+        padding: 1.25rem;
+        border-radius: 6px;
+    }
+
+    .help-block h2 {
+        font-size: 1rem;
+    }
+
+    .contact-list li, 
+    .steps-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Utility Classes */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/* Print Styles */
+@media print {
+    .header {
+        position: static;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-top: 0;
+    }
+
+    .help-block {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* footer */
+
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 50px 0 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Logo dan Deskripsi */
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Quick Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #add8e6;
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 14px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.label {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.value {
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label {
+        margin-bottom: 5px;
+    }
+}
