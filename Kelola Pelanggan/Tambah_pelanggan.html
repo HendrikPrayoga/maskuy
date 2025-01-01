@@ -11,10 +11,10 @@
         <!-- Sidebar -->
         <div class="sidebar">
             <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo" class="logo">
-            <a href="kelola_pelanggan1.html" class="menu-item active">
+            <a href="kelola_pelanggan.html" class="menu-item active">
                 👤 Kelola Pelanggan
             </a>
-            <a href="/Kelola Tiket/Kelola_tiket1.html" class="menu-item">
+            <a href="../Kelola Tiket/Kelola_tiket.html" class="menu-item">
                 🎫 Kelola Tiket
             </a>
         </div>
@@ -22,66 +22,80 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
-                <div class="user-info">
-                    <div class="user-avatar"></div>
+                <div class="header-buttons">
+                    <div class="profile-container">
+                        <div class="avatar">
+                            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="15" r="6" fill="#A1A8C3"/>
+                                <path d="M8 35 C8 25 32 25 32 35" fill="#A1A8C3"/>
+                            </svg>
+                        </div>
+                        <div class="profile-info">
+                            <span class="profile-name" id="adminUsername">Loading...</span>
+                            <span class="profile-role" id="adminRole">Admin</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/Beranda/Beranda.html" class="logout-btn">Logout</a>
+                <a href="/Code Maskuy/Beranda/Beranda.html" class="logout-btn" onclick="showLogoutDialog()">Logout</a>
             </div>
 
-            <a href="kelola_pelanggan1.html" class="back-btn">←</a>
-            
+            <a href="kelola_pelanggan.html" class="back-btn">←</a>
+
             <h1 class="page-title">Tambah Data Pelanggan</h1>
 
             <form id="tambahForm" onsubmit="handleTambahSubmit(event)">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="nomor_identitas">No Identitas</label>
-                        <input type="text" id="nomor_identitas" name="nomor_identitas">
+                        <input type="text" id="nomor_identitas" name="nomor_identitas" required>
                     </div>
                     <div class="form-group">
                         <label for="nomor_telepon">Nomor Telepon</label>
-                        <input type="tel" id="nomor_telepon" name="nomor_telepon">
+                        <input type="tel" id="nomor_telepon" name="nomor_telepon" required>
                     </div>
                 </div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="nama_lengkap">Nama Lengkap</label>
-                        <input type="text" id="nama_lengkap" name="nama_lengkap">
+                        <input type="text" id="nama_lengkap" name="nama_lengkap" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Pelanggan</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                 </div>
                 <button type="submit" class="submit-btn">Tambah Data</button>
+            </form>
 
-                <div id="success-popup" class="success-popup" style="display: none;">
-    
-                    <div class="popup-content">
+            <!-- Success Popup -->
+            <div id="success-popup" class="success-popup" style="display: none;">
+                <div class="popup-content">
                     <div class="success-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" stroke="currentColor" stroke-width="2" d="M4 12l5 5L20 7"></path>
-            </svg>
-        </div>
-        <p class="success-message">Data berhasil ditambahkan!</p>
-        <button class="popup-button" onclick="closePopup()">Kembali</button>
-    </div>
-</div>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                    </div>
+                    <p class="success-message">Data berhasil ditambahkan!</p>
+                    <button class="popup-button" onclick="closePopup()">Kembali</button>
+                </div>
+            </div>
+
+            <!-- Logout Dialog -->
+            <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+                <div class="dialog-content">
+                    <div class="dialog-icon">
+                        <img src="Tanya.png" alt="Question Mark" class="question-icon">
+                    </div>
+                    <div class="dialog-text">
+                        Apakah Anda yakin ingin keluar<br>dari akun ini?
+                    </div>
+                    <div class="dialog-buttons">
+                        <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                        <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-        <div id="logoutDialog" class="dialog-overlay" style="display: none;">
-            <div class="dialog-content">
-                <div class="dialog-icon">
-                    <img src="tanya.png" alt="Question Mark" class="question-icon">
-                </div>
-                <div class="dialog-text">
-                    Apakah Anda yakin ingin keluar<br>dari akun ini?
-                </div>
-                <div class="dialog-buttons">
-                    <button onclick="confirmLogout()" class="btn-ya">Ya</button>
-                    <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
     </div>
     <script src="kelola_pelanggan.js"></script>
 </body>

@@ -2,7 +2,9 @@
 header('Content-Type: application/json');
 
 // Koneksi database
-$conn = new mysqli('localhost', 'root', '', 'maskuy');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+$conn = new mysqli('localhost', 'wish4675_maskuy', 's+]akH]#%)vy', 'wish4675_maskuy');
 
 if ($conn->connect_error) {
     die(json_encode(['error' => "Koneksi gagal: " . $conn->connect_error]));

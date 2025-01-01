@@ -60,8 +60,7 @@ nav ul li a {
     background-color: #6ab0ea;
     /* Warna awal background */
     color: white;
-    /* Warna teks tetap putih */
-    padding: 10px 20px;
+    padding: 10px 10px !important;
     border: none;
     cursor: pointer;
     font-size: 16px;

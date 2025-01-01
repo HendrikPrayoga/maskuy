@@ -3,22 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+ }
+ 
+ body {
     font-family: 'Arial', sans-serif;
     background-color: #f2f7fd;
-}
-
-/* Kontainer Utama */
-.container {
+ }
+ 
+ /* Kontainer Utama */
+ .container {
     display: flex;
     height: flex;
     flex-direction: row;
-}
-
-/* Sidebar Styling */
-.sidebar {
+ }
+ 
+ /* Sidebar Styling */
+ .sidebar {
     width: 250px;
     background-color: #e0effe;
     padding: 30px 20px;
@@ -27,28 +27,28 @@ body {
     align-items: center;
     height: flex;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo-container {
+ }
+ 
+ .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-}
-
-.logo {
+ }
+ 
+ .logo {
     width: 140px;
     height: auto;
     margin-bottom: 15px;
-}
-
-.menu {
+ }
+ 
+ .menu {
     list-style: none;
     width: 100%;
     padding: 0;
-}
-
-.menu a {
+ }
+ 
+ .menu a {
     text-decoration: none;
     color: #2c3e50;
     padding: 15px 25px;
@@ -56,59 +56,99 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s;
     margin-bottom: 10px;
-}
-
-.menu a:hover {
+ }
+ 
+ .menu a:hover {
     background-color: #c8e0f6;
     font-weight: bold;
-}
-
-/* Main Content Styling */
-.main-content {
+ }
+ 
+ /* Main Content Styling */
+ .main-content {
     flex: 1;
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Styling */
-.header {
+ }
+ 
+ /* Header Styling */
+ .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-}
-
-.search-input {
+ }
+ 
+ .search-input {
     width: 700px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 30px;
     font-size: 16px;
-}
-
-.header-buttons {
+ }
+ 
+ .header-buttons {
     display: flex;
+    align-items: center;
     gap: 15px;
-}
-
-.profile-btn, .logout-btn {
-    background-color: #0066cc;
+ }
+ 
+ /* Profile Container Styling */
+ .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #e0effe;
+ }
+ 
+ .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #E6E8F0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .profile-info {
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .profile-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+ }
+ 
+ .profile-role {
+    font-size: 12px;
+    color: #666;
+ }
+ 
+ /* Logout button styling */
+ .logout-btn {
+    background-color: #4785F6;
     color: white;
-    padding: 12px 20px;
+    padding: 8px 20px;
     border-radius: 30px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.profile-btn:hover, .logout-btn:hover {
-    background-color: #005bb5;
-}
-
-/* Dialog Logout Styling */
-.dialog-overlay {
+    font-size: 14px;
+ }
+ 
+ .logout-btn:hover {
+    background-color: #3B72D9;
+ }
+ 
+ /* Dialog Logout Styling */
+ .dialog-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -119,18 +159,18 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-
-.dialog-content {
+ }
+ 
+ .dialog-content {
     background: white;
     padding: 24px;
     border-radius: 12px;
     width: 320px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dialog-icon {
+ }
+ 
+ .dialog-icon {
     background-color: #F3F4F6;
     width: 64px;
     height: 64px;
@@ -139,26 +179,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.question-icon {
+ }
+ 
+ .question-icon {
     width: 32px;
     height: 32px;
-}
-
-.dialog-text {
+ }
+ 
+ .dialog-text {
     color: #1F2937;
     font-size: 14px;
     margin-bottom: 24px;
     line-height: 1.5;
-}
-
-.dialog-buttons {
+ }
+ 
+ .dialog-buttons {
     display: flex;
     gap: 12px;
-}
-
-.btn-ya {
+ }
+ 
+ .btn-ya {
     flex: 1;
     padding: 8px 16px;
     background-color: #3B82F6;
@@ -168,13 +208,13 @@ body {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s;
-}
-
-.btn-ya:hover {
+ }
+ 
+ .btn-ya:hover {
     background-color: #2563EB;
-}
-
-.btn-tidak {
+ }
+ 
+ .btn-tidak {
     flex: 1;
     padding: 8px 16px;
     background-color: #F3F4F6;
@@ -184,68 +224,60 @@ body {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.2s;
-}
-
-.btn-tidak:hover {
+ }
+ 
+ .btn-tidak:hover {
     background-color: #E5E7EB;
-}
-
-/* Responsif untuk dialog logout */
-@media (max-width: 768px) {
-    .dialog-content {
-        width: 90%;
-        margin: 0 20px;
-    }
-}
-
-/* Dashboard Title */
-.dashboard-title {
+ }
+ 
+ /* Dashboard Title */
+ .dashboard-title {
     font-size: 24px;
     font-weight: 600;
     color: #333;
     margin-bottom: 30px;
-}
-
-/* Stats Box (Total Pelanggan dan Penghasilan) */
-.stats-box {
+ }
+ 
+ /* Stats Box (Total Pelanggan dan Penghasilan) */
+ .stats-box {
     display: flex;
-    justify-content: space-between; /* Membuat Total Pelanggan dan Penghasilan berdampingan */
-    gap: 30px; /* Memberi jarak antar kedua elemen */
+    justify-content: space-between;
+    gap: 30px;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Menjaga agar elemen tetap berada dalam baris yang sama pada layar kecil */
-}
-
-.stats-card {
+    flex-wrap: wrap;
+ }
+ 
+ .stats-card {
     background-color: #fff;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Agar kedua box memiliki ukuran yang seimbang */
-    min-width: 280px; /* Membuat kotak tidak terlalu sempit */
+    flex: 1;
+    min-width: 280px;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
-}
-
-.stats-card:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Efek hover pada card */
-}
-
-.stats-card h3 {
+ }
+ 
+ .stats-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .stats-card h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 15px;
     font-weight: 600;
-}
-
-.stats-card p {
+ }
+ 
+ .stats-card p {
     font-size: 26px;
     font-weight: 600;
     color: #007bff;
     margin-top: 10px;
-}
-
-/* Tombol Tambah */
-.add-btn {
+ }
+ 
+ /* Tombol Tambah */
+ .add-btn {
     background-color: #007bff;
     color: white;
     padding: 12px 20px;
@@ -254,41 +286,41 @@ body {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
-}
-
-.add-btn:hover {
+ }
+ 
+ .add-btn:hover {
     background-color: #0056b3;
-}
-
-/* Table Styling */
-table {
+ }
+ 
+ /* Table Styling */
+ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-}
-
-table thead {
+ }
+ 
+ table thead {
     background-color: #c8e0f6;
-}
-
-table th, table td {
+ }
+ 
+ table th, table td {
     padding: 15px;
     border-bottom: 1px solid #ddd;
     text-align: left;
-}
-
-table th {
+ }
+ 
+ table th {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: bold;
-}
-
-table tr:hover {
+ }
+ 
+ table tr:hover {
     background-color: #f1f9ff;
-}
-
-/* Buttons: Edit & Delete */
-.edit-btn {
+ }
+ 
+ /* Buttons: Edit & Delete */
+ .edit-btn {
     background-color: #28a745;
     color: white;
     padding: 5px 12px;
@@ -296,35 +328,166 @@ table tr:hover {
     cursor: pointer;
     border: none;
     margin-right: 10px;
-}
-
-.delete-btn {
+ }
+ 
+ .delete-btn {
     background-color: #dc3545;
     color: white;
     padding: 5px 12px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
-}
-
-.edit-btn:hover {
+ }
+ 
+ .edit-btn:hover {
     background-color: #218838;
-}
-
-.delete-btn:hover {
+ }
+ 
+ .delete-btn:hover {
     background-color: #c82333;
+ }
+ 
+ /* Styling untuk dialog konfirmasi hapus dan notifikasi */
+.red-circle, .success-circle, .error-circle {
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto 20px;
 }
 
-/* Menambahkan responsif pada perangkat kecil */
-@media (max-width: 768px) {
+.red-circle {
+   background-color: #ff4d4f;
+}
+
+.success-circle {
+   background-color: #4CAF50;
+}
+
+.error-circle {
+   background-color: #ff4d4f;
+}
+
+.trash-icon, .check-icon, .error-icon {
+   width: 24px;
+   height: 24px;
+   color: white;
+}
+
+.dialog-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+}
+
+.dialog-content {
+   background: white;
+   padding: 24px;
+   border-radius: 12px;
+   text-align: center;
+   max-width: 400px;
+   width: 90%;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-text {
+   color: #1F2937;
+   font-size: 14px;
+   margin-bottom: 24px;
+   line-height: 1.5;
+}
+
+.dialog-buttons {
+   display: flex;
+   gap: 12px;
+   justify-content: center;
+}
+
+.btn-ya {
+   background-color: #4285f4;
+   color: white;
+   border: none;
+   padding: 8px 32px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   min-width: 120px;
+   transition: background-color 0.2s;
+}
+
+.btn-ya:hover {
+   background-color: #3b73d9;
+}
+
+.btn-ya:disabled {
+   background-color: #a4c2f4;
+   cursor: not-allowed;
+}
+
+.btn-tidak {
+   background: none;
+   color: #4285f4;
+   border: none;
+   padding: 8px 32px;
+   cursor: pointer;
+   font-size: 14px;
+   min-width: 120px;
+   transition: color 0.2s;
+}
+
+.btn-tidak:hover {
+   color: #3b73d9;
+}
+
+.btn-tidak:disabled {
+   color: #a4c2f4;
+   cursor: not-allowed;
+}
+
+.btn-oke {
+   background-color: #4285f4;
+   color: white;
+   border: none;
+   padding: 8px 32px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   min-width: 120px;
+   transition: background-color 0.2s;
+}
+
+.btn-oke:hover {
+   background-color: #3b73d9;
+}
+
+.btn-oke:disabled {
+   background-color: #a4c2f4;
+   cursor: not-allowed;
+}
+
+ /* Responsif untuk dialog logout dan stats box */
+ @media (max-width: 768px) {
+    .dialog-content {
+        width: 90%;
+        margin: 0 20px;
+    }
+ 
     .stats-box {
-        flex-direction: column; /* Mengubah arah kolom pada perangkat kecil */
+        flex-direction: column;
         gap: 20px;
     }
-
-    .stats-card {
-        flex: none; /* Card tidak fleksibel */
-        width: 100%; /* Card mengisi seluruh lebar kontainer */
-    }
-}
  
+    .stats-card {
+        flex: none;
+        width: 100%;
+    }
+ }

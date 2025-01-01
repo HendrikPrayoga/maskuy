@@ -14,8 +14,8 @@
                 <img src="/Code Maskuy/MASKUYBlue.png" alt="MASKUY Logo" class="logo">
             </div>
             <ul class="menu">
-                <li><a href="/Code Maskuy/Kelola Pelanggan/kelola_pelanggan1.html">👤 Kelola Pelanggan</a></li>
-                <li><a href="/Code Maskuy/Kelola Tiket/Kelola_tiket1.html">🎫 Kelola Tiket</a></li>
+                <li><a href="/Code Maskuy/Kelola Pelanggan/kelola_pelanggan.html">👤 Kelola Pelanggan</a></li>
+                <li><a href="/Code Maskuy/Kelola Tiket/Kelola_tiket.html">🎫 Kelola Tiket</a></li>
             </ul>
         </div>
 
@@ -23,22 +23,34 @@
         <div class="main-content">
             <div class="header">
                 <div class="header-buttons">
-                    <a href="profile.html" class="profile-btn">Profile</a>
+                    <div class="profile-container">
+                        <div class="avatar">
+                            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="15" r="6" fill="#A1A8C3"/>
+                                <path d="M8 35 C8 25 32 25 32 35" fill="#A1A8C3"/>
+                            </svg>
+                        </div>
+                        <div class="profile-info">
+                            <span class="profile-name" id="adminUsername">Loading...</span>
+                            <span class="profile-role" id="adminRole">Admin</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
                     <a href="/Code Maskuy/Beranda/Beranda.html" class="logout-btn">Logout</a>
                 </div>
-            </div>
 
-            <div class="back-button">
-                <a href="Kelola_tiket1.html" class="back-btn">
-                    <span class="arrow">&#8592;</span>
-                </a>
             </div>
+            <a href="Kelola_tiket.html" class="back-btn">←</a>
+
+
 
             <div class="form-container">
+
                 <h2>Edit Data Tiket</h2>
                 <form id="editForm" method="POST">
                     <input type="hidden" id="id" name="id">
-                    
+
                     <div class="form-group">
                         <label for="nomor_identitas">Nomor Identitas:</label>
                         <input type="text" id="nomor_identitas" name="nomor_identitas" required>
@@ -70,19 +82,38 @@
                 </form>
             </div>
         </div>
+         <!-- Notifikasi Logout -->
         <div id="logoutDialog" class="dialog-overlay" style="display: none;">
-            <div class="dialog-content">
-                <div class="dialog-icon">
-                    <img src="tanya.png" alt="Question Mark" class="question-icon">
+            <div class="logout-dialog-box">
+                <div class="logout-icon-container">
+                    <img src="/Code Maskuy/Kelola Pelanggan/Tanya.png" alt="Question Mark" class="question-icon">
                 </div>
-                <div class="dialog-text">
+                <div class="logout-message">
                     Apakah Anda yakin ingin keluar<br>dari akun ini?
                 </div>
-                <div class="dialog-buttons">
+                <div class="logout-action-buttons">
                     <button onclick="confirmLogout()" class="btn-ya">Ya</button>
                     <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+                </div>
+            </div>
+        </div>
+    <!-- Notifikasi Sukses Edit -->
+    <div class="overlay" id="successEditDialog" style="display: none;">
+        <div class="success-dialog-box">
+            <div class="success-circle">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#4CAF50"/>
+                    <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="success-message">
+                Data berhasil diubah!
+            </div>
+            <div class="success-action-buttons">
+                <button onclick="handleSuccessEditClose()" class="btn-kembali">Kembali</button>
+            </div>
+        </div>
     </div>
-
     <script src="Kelola_tkt.js"></script>
 </body>
 </html>

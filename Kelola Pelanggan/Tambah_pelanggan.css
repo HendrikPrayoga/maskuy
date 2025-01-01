@@ -1,3 +1,4 @@
+/* Reset dan default styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +15,14 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar styling */
+/* Sidebar */
 .sidebar {
     width: 250px;
     background-color: #ffffff;
     border-right: 1px solid #e5e7eb;
     padding: 20px;
+    position: fixed;
+    height: 100vh;
 }
 
 .logo {
@@ -36,7 +39,7 @@ body {
     text-decoration: none;
     color: #4b5563;
     border-radius: 8px;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
 }
 
 .menu-item:hover {
@@ -48,32 +51,65 @@ body {
     color: white;
 }
 
-/* Main content styling */
+/* Main Content */
 .main-content {
     flex: 1;
+    margin-left: 250px; /* Sesuai dengan lebar sidebar */
     padding: 20px 40px;
     background-color: #f8fafc;
 }
 
+/* Header */
 .header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-bottom: 40px;
+    padding: 20px 0;
 }
 
-.user-info {
+.header-buttons {
     display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.user-avatar {
+    gap: 15px;
+ }
+ 
+ /* Profile Container Styling */
+ .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    border: 1px solid #e0effe;
+ }
+ 
+ .avatar {
     width: 32px;
     height: 32px;
+    background-color: #E6E8F0;
     border-radius: 50%;
-    background-color: #e5e7eb;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .profile-info {
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .profile-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+ }
+ 
+ .profile-role {
+    font-size: 12px;
+    color: #666;
+ }
 
 .logout-btn {
     background-color: #3b82f6;
@@ -82,9 +118,162 @@ body {
     border-radius: 6px;
     text-decoration: none;
     margin-left: 16px;
+    transition: background-color 0.2s ease;
 }
 
-/* Dialog Logout Styling */
+.logout-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Form Styles */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 24px;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: translateX(-5px);
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 32px;
+}
+
+form {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #374151;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.submit-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px 48px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    margin: 40px auto 0;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Success Popup */
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    width: 90%;
+    animation: popIn 0.3s ease-out;
+}
+
+.success-icon {
+    width: 48px;
+    height: 48px;
+    background: #4ade80;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.success-message {
+    color: #1f2937;
+    font-size: 1rem;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.popup-button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.popup-button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* Logout Dialog */
 .dialog-overlay {
     position: fixed;
     top: 0;
@@ -92,10 +281,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 .dialog-content {
@@ -104,7 +294,8 @@ body {
     border-radius: 12px;
     width: 320px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.3s ease-out;
 }
 
 .dialog-icon {
@@ -135,16 +326,20 @@ body {
     gap: 12px;
 }
 
-.btn-ya {
+.btn-ya, .btn-tidak {
     flex: 1;
     padding: 8px 16px;
-    background-color: #3B82F6;
-    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
-    transition: background-color 0.2s;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-ya {
+    background-color: #3B82F6;
+    color: white;
 }
 
 .btn-ya:hover {
@@ -152,156 +347,44 @@ body {
 }
 
 .btn-tidak {
-    flex: 1;
-    padding: 8px 16px;
     background-color: #F3F4F6;
     color: #1F2937;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s;
 }
 
 .btn-tidak:hover {
     background-color: #E5E7EB;
 }
 
-/* Responsif untuk dialog logout */
+/* Animations */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
     .dialog-content {
         width: 90%;
         margin: 0 20px;
     }
-}
-
-.back-btn {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 24px;
-    color: #000;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.page-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 32px;
-}
-
-/* Form styling */
-form {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.form-group {
-    margin-bottom: 24px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #374151;
-    font-weight: 500;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background-color: #ffffff;
-    color: #374151;
-    font-size: 16px;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 1px #3b82f6;
-}
-
-.submit-btn {
-    background-color: #3b82f6;
-    color: white;
-    padding: 12px 48px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    display: block;
-    margin: 40px auto 0;
-}
-
-.submit-btn:hover {
-    background-color: #2563eb;
-}
-
-.success-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    max-width: 320px;
-    width: 90%;
-}
-
-.success-icon {
-    width: 48px;
-    height: 48px;
-    background: #4ade80;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-}
-
-.success-message {
-    color: #1f2937;
-    font-size: 0.95rem;
-    margin: 1rem 0;
-    font-weight: normal;
-}
-
-.popup-button {
-    background: #3b82f6;
-    color: white;
-    border: none;
-    padding: 0.5rem 2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.2s;
-}
-
-.popup-button:hover {
-    background: #2563eb;
 }

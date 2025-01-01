@@ -1,0 +1,33 @@
+[16-Dec-2024 15:06:12 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/Kelola Tiket/penghasilan&pelanggan1.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/penghasilan&pelanggan1.php on line 13
+[16-Dec-2024 15:06:12 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/Kelola Tiket/Profil.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Profil.php on line 3
+[17-Dec-2024 03:47:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Kelola Tiket/Profil.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Kelola Tiket/Profil.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Profil.php on line 3
+[17-Dec-2024 03:47:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Kelola Tiket/Profil.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Kelola Tiket/Profil.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Profil.php on line 3
+[17-Dec-2024 03:47:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Kelola Tiket/Profil.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Kelola Tiket/Profil.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Profil.php on line 3
+[17-Dec-2024 03:47:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Kelola Tiket/Tambah.php:5
+Stack trace:
+#0 /home/maskyid1/public_html/Kelola Tiket/Tambah.php(5): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Tambah.php on line 5
+[17-Dec-2024 03:48:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Kelola Tiket/Profil.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Kelola Tiket/Profil.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Kelola Tiket/Profil.php on line 3

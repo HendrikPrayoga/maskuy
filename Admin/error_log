@@ -1,0 +1,123 @@
+[16-Dec-2024 15:00:15 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[16-Dec-2024 15:00:27 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[16-Dec-2024 15:11:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[16-Dec-2024 15:11:43 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[16-Dec-2024 15:11:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:11:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:11:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:11:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:12:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:14:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:14:44 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:14:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:14:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:49 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 03:15:56 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 04:53:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 04:54:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 04:54:21 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 04:54:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3
+[17-Dec-2024 10:22:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'maskyid1_maskuy'@'localhost' (using password: YES) in /home/maskyid1/public_html/Admin/login.php:3
+Stack trace:
+#0 /home/maskyid1/public_html/Admin/login.php(3): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Admin/login.php on line 3

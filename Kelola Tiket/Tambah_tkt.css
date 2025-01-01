@@ -1,120 +1,278 @@
-* {
+/* Reset dan styling dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-body {
-    background-color: #f8fafc;
-}
-
+/* Layout Container */
 .container {
     display: flex;
+    width: 100%;
     min-height: 100vh;
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 240px;
+    width: 280px;
+    background-color: white;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
-.logo img {
-    width: 80%;
-    max-width: 140px;
-    height: auto;
+.logo-container {
+    text-align: left;
     margin-bottom: 40px;
+    padding-left: 10px;
 }
 
-.nav-item {
+.logo {
+    max-width: 150px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu li a {
     display: flex;
     align-items: center;
-    padding: 12px 16px;
+    padding: 15px;
+    color: #666;
     text-decoration: none;
-    color: #4a5568;
-    margin-bottom: 8px;
+    font-size: 14px;
     border-radius: 8px;
-    transition: background-color 0.2s;
 }
 
-.nav-item:hover {
-    background-color: #f1f5f9;
+.menu li:last-child a {
+    background-color: #4171ED;
+    color: white;
 }
 
-.nav-icon {
-    margin-right: 12px;
-}
-
-/* Main Content */
 .main-content {
     flex: 1;
-    background-color: #f8fafc;
+    padding: 30px 40px;
+    background-color: #F8F9FD;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* Header */
-header {
+
+
+.header {
+    width: 100%; /* Tambahkan ini */
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 16px 24px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
+    gap: 15px; /* Tambahkan gap antara profile dan logout */
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; /* Tambahkan ini */
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Profile Container Styling */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    border: 1px solid #e0effe;
+    transition: all 0.2s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #E6E8F0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Tambahkan ini */
+}
+
+.avatar svg {
+    width: 100%; /* Tambahkan ini */
+    height: 100%; /* Tambahkan ini */
+}
+
+ .profile-info {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .profile-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+ }
+
+ .profile-role {
+    font-size: 12px;
+    color: #666;
+ }
+
+
+ .logout-btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+}
+
+.logout-btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-1px);
+}
+
+/* Back Button */
+.back-button {
+    margin-bottom: 30px;
 }
 
 .back-btn {
-    color: #3b82f6;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    align-self: flex-start; /* Tambahkan ini */
+    color: #000;
     text-decoration: none;
     font-size: 24px;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+/* Form Container */
+.form-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%; /* Tambahkan ini */
+    max-width: 800px;
+    box-sizing: border-box; /* Tambahkan ini */
+    margin: 0 auto;
 }
 
-.admin-name {
-    color: #4b5563;
+h2 {
+    text-align: center;
+    color: #333;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* Form layout */
+#editForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.form-group label {
+    display: block;
     font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
 }
 
-.logout-btn {
-    background-color: #0066cc;
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F8F9FD;
+    box-sizing: border-box;
+}
+
+.form-group input[readonly] {
+    background-color: #F8F9FD;
+}
+
+/* Form Actions */
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 0;
+    background-color: #4171ED;
     color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    text-decoration: none;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    text-align: center;
 }
 
-/* Dialog Logout Styling */
-.dialog-overlay {
+/* Shared Overlay Style */
+.dialog-overlay,
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
- }
- 
- .dialog-content {
+}
+
+/* Logout Dialog Styles */
+.logout-dialog-box {
     background: white;
     padding: 24px;
     border-radius: 12px;
     width: 320px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
- }
- 
- .dialog-icon {
+}
+
+.logout-icon-container {
     background-color: #F3F4F6;
     width: 64px;
     height: 64px;
@@ -123,131 +281,107 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
- }
- 
- .question-icon {
+}
+
+.question-icon {
     width: 32px;
     height: 32px;
- }
- 
- .dialog-text {
+}
+
+.logout-message {
     color: #1F2937;
     font-size: 14px;
     margin-bottom: 24px;
     line-height: 1.5;
- }
- 
- .dialog-buttons {
+}
+
+.logout-action-buttons {
     display: flex;
     gap: 12px;
- }
- 
- .btn-ya {
-    flex: 1;
+    justify-content: center;
+}
+
+/* Success Dialog Styles */
+.success-dialog-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.success-circle {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8F5E9;
+    border-radius: 50%;
+}
+
+.success-circle svg {
+    width: 24px;
+    height: 24px;
+    color: #4CAF50;
+}
+
+.success-message {
+    margin: 12px 0 20px;
+    color: #333333;
+    font-size: 14px;
+}
+
+.success-action-buttons {
+    text-align: center;
+}
+
+/* Button Styles */
+.btn-ya,
+.btn-tidak {
     padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.btn-ya {
     background-color: #3B82F6;
     color: white;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s;
- }
- 
- .btn-ya:hover {
-    background-color: #2563EB;
- }
- 
- .btn-tidak {
-    flex: 1;
-    padding: 8px 16px;
+}
+
+.btn-tidak {
     background-color: #F3F4F6;
     color: #1F2937;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s;
- }
- 
- .btn-tidak:hover {
-    background-color: #E5E7EB;
- }
- 
- /* Responsif untuk dialog logout */
- @media (max-width: 768px) {
-    .dialog-content {
-        width: 90%;
-        margin: 0 20px;
-    }
- }
-
-/* Form Container */
-.form-container {
-    padding: 24px;
 }
 
-.form-content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 24px;
-}
-
-h1 {
-    font-size: 20px;
-    color: #111827;
-    font-weight: 500;
-    margin-bottom: 24px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 24px;
-}
-
-.form-group {
-    margin-bottom: 24px;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    color: #4b5563;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background-color: #f9fafb;
-    font-size: 14px;
-}
-
-input:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #3b82f6;
+.btn-kembali {
+    background-color: #1a73e8;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+    min-width: 80px;
 }
 
-.submit-btn:hover {
-    background-color: #2563eb;
+/* Hover states */
+.btn-ya:hover {
+    background-color: #2563EB;
+}
+
+.btn-tidak:hover {
+    background-color: #E5E7EB;
+}
+
+.btn-kembali:hover {
+    background-color: #1557b0;
 }
 
 /* Responsive Design */
@@ -258,9 +392,30 @@ input:focus {
 
     .sidebar {
         width: 100%;
+        margin-bottom: 20px;
     }
 
-    .form-row {
+    .main-content {
+        padding: 20px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    #editForm {
         grid-template-columns: 1fr;
+    }
+
+    .logout-dialog-box,
+    .success-dialog-box {
+        width: 90%;
+        margin: 0 20px;
+    }
+
+    .btn-ya,
+    .btn-tidak,
+    .btn-kembali {
+        padding: 10px 24px;
     }
 }

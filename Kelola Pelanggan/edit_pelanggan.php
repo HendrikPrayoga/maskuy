@@ -2,7 +2,7 @@
 header('Content-Type: application/json'); // Untuk memastikan response dalam format JSON
 
 // Koneksi database
-$conn = new mysqli('localhost', 'root', '', 'maskuy');
+$conn = new mysqli('localhost', 'wish4675_maskuy', 's+]akH]#%)vy', 'wish4675_maskuy');
 
 if ($conn->connect_error) {
     die(json_encode(['status' => 'error', 'message' => "Koneksi gagal: " . $conn->connect_error]));

@@ -1,0 +1,10 @@
+2024-12-16 15:21:28 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-16 15:27:19 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-16 15:30:35 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-16 15:35:49 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-16 15:46:59 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-17 04:51:55 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-17 07:05:04 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-17 10:24:27 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-17 10:31:25 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused
+2024-12-17 14:32:23 - Email error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 111 Additional SMTP info: Connection refused

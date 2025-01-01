@@ -4,10 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
-
-/* Gaya untuk body */
-body {
+ }
+ 
+ /* Gaya untuk body */
+ body {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,10 +15,10 @@ body {
     background-color: #4d7efa;
     position: relative;
     overflow: hidden;
-}
-
-/* Background effect */
-body::before {
+ }
+ 
+ /* Background effect */
+ body::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -27,10 +27,10 @@ body::before {
     height: 200%;
     background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
     z-index: 0;
-}
-
-/* Container login */
-.login-container {
+ }
+ 
+ /* Container login */
+ .login-container {
     width: 400px;
     padding: 32px;
     background-color: #fff;
@@ -38,88 +38,98 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
-}
-
-/* Judul */
-.login-container h2 {
+ }
+ 
+ /* Judul */
+ .login-container h2 {
     text-align: center;
     margin-bottom: 8px;
     color: #333;
     font-size: 22px;
     font-weight: 600;
-}
-
-.subtitle {
+ }
+ 
+ .subtitle {
     text-align: center;
     color: #666;
     margin-bottom: 24px;
     font-size: 13px;
     line-height: 1.4;
-}
-
-/* Form groups */
-.form-group {
+ }
+ 
+ /* Form groups */
+ .form-group {
     margin-bottom: 16px;
-}
-
-/* Label dan input field */
-.login-container label {
+ }
+ 
+ /* Label dan input field */
+ .login-container label {
     display: block;
     color: #333;
     margin-bottom: 8px;
     font-size: 14px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
+ }
+ 
+ .login-container input[type="text"],
+ .login-container input[type="password"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #e8e8e8;
     border-radius: 6px;
     background-color: #f7f7f7;
     font-size: 14px;
-}
-
-.login-container input::placeholder {
+ }
+ 
+ .login-container input::placeholder {
     color: #999;
-}
-
-/* Password header with forgot password link */
-.password-header {
+ }
+ 
+ /* Password header with forgot password link */
+ .password-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
-}
-
-.forgot-password {
+ }
+ 
+ .forgot-password {
     color: #666;
     text-decoration: none;
     font-size: 13px;
-}
-
-/* Remember me checkbox */
-.remember-me {
+ }
+ 
+ .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ef9a9a;
+ }
+ 
+ /* Remember me checkbox */
+ .remember-me {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-top: 16px;
-}
-
-.remember-me input[type="checkbox"] {
+ }
+ 
+ .remember-me input[type="checkbox"] {
     margin-right: 8px;
     accent-color: #4d7efa;
-}
-
-.remember-me label {
+ }
+ 
+ .remember-me label {
     color: #666;
     font-size: 13px;
     display: inline;
     margin: 0;
-}
-
-/* Tombol login */
-.login-container button {
+ }
+ 
+ /* Tombol login */
+ .login-container button {
     width: 100%;
     padding: 12px;
     background-color: #4d7efa;
@@ -130,8 +140,53 @@ body::before {
     font-size: 15px;
     font-weight: 500;
     transition: background-color 0.2s;
-}
-
-.login-container button:hover {
+ }
+ 
+ .login-container button:hover {
     background-color: #3d6ee6;
-}
+ }
+ 
+ /* Password field styling */
+ .password-container {
+    position: relative;
+    width: 100%;
+ }
+ 
+ .password-container input[type="password"],
+ .password-container input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px; /* Memberi ruang untuk ikon mata */
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    font-size: 14px;
+ }
+ 
+ .password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+ }
+ 
+ /* Styling untuk ikon mata */
+ .eye-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #999; /* Warna ikon default */
+    transition: stroke 0.2s;
+ }
+ 
+ .password-toggle:hover .eye-icon {
+    stroke: #666; /* Warna ikon saat hover */
+ }
+ 
+ /* Animasi smooth untuk transisi password */
+ .password-container input {
+    transition: all 0.2s ease;
+ }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli('localhost', 'root', '', 'maskuy');
+$conn = new mysqli('localhost', 'wish4675_maskuy', 's+]akH]#%)vy', 'wish4675_maskuy');
 
 // Cek koneksi database
 if ($conn->connect_error) {
@@ -9,21 +9,27 @@ if ($conn->connect_error) {
 
 // Jika form login disubmit
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = trim($_POST['username']); // Menghilangkan spasi tambahan
-    $password = md5(trim($_POST['password'])); // Mengenkripsi password dengan MD5
+    $username = trim($_POST['username']);
+    $password = md5(trim($_POST['password']));
 
     // Query untuk memeriksa data di tabel admin
-    $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
-    $result = $conn->query($query);
+    $query = "SELECT * FROM admin WHERE username=? AND password=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
-        // Login berhasil, simpan sesi
+        // Login berhasil
         $_SESSION['admin'] = $username;
-        header('Location: /Code Maskuy/Kelola Pelanggan/kelola_pelanggan1.html'); // Arahkan ke halaman dashboard
+        header('Location: ../Kelola Pelanggan/kelola_pelanggan.html');
         exit;
     } else {
-        // Jika login gagal
-        $error_message = "Username atau password salah!";
+        // Login gagal, redirect dengan parameter error
+        header('Location: admin.html?error=1');
+        exit;
     }
 }
 
+$conn->close();
+?>

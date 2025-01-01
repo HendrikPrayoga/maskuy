@@ -1,0 +1,5 @@
+[16-Dec-2024 15:20:20 UTC] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home/maskyid1/public_html/Tiket/tiket.php:28
+Stack trace:
+#0 /home/maskyid1/public_html/Tiket/tiket.php(28): mysqli->prepare()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Tiket/tiket.php on line 28

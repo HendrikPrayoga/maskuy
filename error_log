@@ -1,0 +1,20 @@
+[16-Dec-2024 15:06:46 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/db.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/db.php on line 7
+[16-Dec-2024 15:07:45 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/db.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/db.php on line 7
+[16-Dec-2024 15:07:48 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/db.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/db.php on line 7
+[16-Dec-2024 15:07:58 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/db.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/db.php on line 7
+[16-Dec-2024 15:08:44 UTC] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in /home/maskyid1/public_html/db.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/maskyid1/public_html/db.php on line 10

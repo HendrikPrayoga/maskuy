@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Koneksi ke database
-$conn = new mysqli('localhost', 'root', '', 'maskuy');
+$conn = new mysqli('localhost', 'wish4675_maskuy', 's+]akH]#%)vy', 'wish4675_maskuy');
 
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);

@@ -6,9 +6,9 @@ header('Content-Type: application/json');
 try {
     // Database connection
     $host = 'localhost';
-    $user = 'root';
-    $password = '';
-    $database = 'maskuy';
+    $user = "wish4675_maskuy";
+    $password = "s+]akH]#%)vy";
+    $database = "wish4675_maskuy";
 
     $conn = new mysqli($host, $user, $password, $database);
 

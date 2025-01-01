@@ -1,0 +1,5 @@
+[17-Dec-2024 03:46:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/maskyid1/public_html/Data Base/Kelola_tkt.php:8
+Stack trace:
+#0 /home/maskyid1/public_html/Data Base/Kelola_tkt.php(8): mysqli->__construct()
+#1 {main}
+  thrown in /home/maskyid1/public_html/Data Base/Kelola_tkt.php on line 8

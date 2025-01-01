@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Pelanggan - Maskuy</title>
+    <link rel="stylesheet" href="Kelola_tiket.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="../MASKUYBlue.png" alt="MASKUY Logo" class="logo">
+            </div>
+            <ul class="menu">
+                <li><a href="../Kelola Pelanggan/kelola_pelanggan.html">👤 Kelola Pelanggan</a></li>
+                <li><a href="Kelola_tiket.html">🎫 Kelola Tiket</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <input type="text" id="search" placeholder="Cari pelanggan berdasarkan nomor identitas atau nama..." class="search-input" onkeyup="cariData()">
+                <div class="header-buttons">
+                    <div class="profile-container">
+                        <div class="avatar">
+                            <svg width="32" height="32" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="15" r="6" fill="#A1A8C3"/>
+                                <path d="M8 35 C8 25 32 25 32 35" fill="#A1A8C3"/>
+                            </svg>
+                        </div>
+                        <div class="profile-info">
+                            <span class="profile-name" id="adminUsername">Loading...</span>
+                            <span class="profile-role" id="adminRole">Admin</span>
+                        </div>
+                    </div>
+                    <a href="/Code Maskuy/Beranda/Beranda.html" onclick="showLogoutDialog()" class="logout-btn">Logout</a>
+                </div>
+            </div>
+
+            <h2 class="dashboard-title">Dashboard</h2>
+
+            <div class="stats-box">
+                <div class="stats-card">
+                    <div class="icon-container">
+                        <img src="pelanggan.png" alt="Total Pelanggan Icon" class="icon">
+                    </div>
+                    <h3>Total Tiket</h3>
+                    <p id="total-pelanggan">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <div class="icon-container">
+                        <img src="Grafik.png" alt="Total Penghasilan Icon" class="icon">
+                    </div>
+                    <h3>Total Penghasilan</h3>
+                    <p id="total-penghasilan">Rp. 0</p>
+                </div>
+            </div>
+
+            <button class="add-btn" onclick="window.location.href='Tambah_tkt.html'">+ Tambah</button>
+            <table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nomor Identitas</th>
+                            <th>Nama Lengkap</th>
+                            <th>Jumlah Tiket</th>
+                            <th>Total Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-tabel">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </table>
+        </div>
+        <div id="logoutDialog" class="dialog-overlay" style="display: none;">
+            <div class="dialog-content">
+                <div class="dialog-icon">
+                    <img src="Tanya.png" alt="Question Mark" class="question-icon">
+                </div>
+                <div class="dialog-text">
+                    Apakah Anda yakin ingin keluar<br>dari akun ini?
+                </div>
+                <div class="dialog-buttons">
+                    <button onclick="confirmLogout()" class="btn-ya">Ya</button>
+                    <button onclick="closeLogoutDialog()" class="btn-tidak">Tidak</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Kelola_tkt.js"></script>
+</body>
+</html>

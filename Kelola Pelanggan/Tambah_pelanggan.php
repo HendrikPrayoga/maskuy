@@ -2,13 +2,16 @@
 header('Content-Type: application/json');
 
 // Koneksi ke database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "maskuy";
+$host = "localhost";
+$user = "maskyid1_maskuy";
+$password = "^{(&k#y;IW1@";
+$dbname = "maskyid1_maskuy";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 // Membuat koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 
 // Cek koneksi
 if ($conn->connect_error) {

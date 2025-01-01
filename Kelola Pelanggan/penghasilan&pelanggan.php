@@ -5,21 +5,21 @@ header('Content-Type: application/json');
 
 try {
     // Database connection
-    $host = 'localhost';
-    $user = 'root';
-    $password = '';
-    $database = 'maskuy';
+$host = "localhost";
+$user = "wish4675_maskuy";
+$password = "s+]akH]#%)vy";
+$database = "wish4675_maskuy";
+
 
     $conn = new mysqli($host, $user, $password, $database);
-
     // Check connection
     if ($conn->connect_error) {
-        throw new Exception("Connection failed: " . $conn->connect_error);
+        echo "Connection failed: " . $conn->connect_error;
     }
 
     // Query to get total tickets sold and total income
     $query = "SELECT 
-        COALESCE(SUM(jumlah), 0) as total_pelanggan,
+        COUNT(id) as total_pelanggan,
         COALESCE(SUM(harga * jumlah), 0) as total_penghasilan 
         FROM pesanan 
         WHERE nama_tiket IS NOT NULL";
